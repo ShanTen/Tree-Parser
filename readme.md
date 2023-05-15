@@ -1,6 +1,6 @@
 # Serialized Tree Parser
 
-*TLDR;* Converts mark up in the form of a an ascii tree into an iterable.
+*TLDR;* Converts markup in the form of an ascii tree into an iterable.
 
 ## Objective
 - I have some data in a text file, it looks like a tree. 
@@ -48,6 +48,13 @@ Something like this:
 + There is no tool to generate the serialized data (yet)
 
 ## Usage
+
+### Using it as a module
+```python
+from TreeParserRunner import *
+t = load_tree_from_file("trees/project.tree")
+print_tree(t)
+```
 
 ### Using run.py
 ```python
