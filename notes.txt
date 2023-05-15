@@ -1,0 +1,72 @@
+Goal:
+Serialized text to memory object in such a way that I can iterate them
+
+The tokens will have the following attributes:
+    - ObjectType (file / folder)
+    - ObjectName (some text)
+    - Line (0, 1, 2, 3...)
+    - IndentLevel (0,1,2,3...)
+    - FinalIndent (True/False)
+
+Unicode Comparison:
+    https://stackoverflow.com/questions/49662585/how-do-i-compare-a-unicode-string-that-has-different-bytes-but-the-same-value
+
+The lexer will return a list of tokens
+Add measure to force the parsing of a file without an extension 
+
+NOTE: Write a forced file declaration (Explicit file declaration for files without an extension or with a non-standard extension)
+
+Contextual Interpreter
+
+<TreeStart>
+[messaging-app]
+├── client/
+<TreeEnd>
+
+
+Should generate something like this:
+
+Token(type, value, line, IndentLevel, isFinalIndent)
+
+type should be either "ENTRY", "EXIT", "ROOT" ,"DIR" or "FILE"
+
+[
+    Token(type,     value,    lineNr, IndentLevel, isFinalIndent)    
+    Token(ENTRY, <TreeStart>,   0,       None,       False), 
+    Token(ROOT,  messaging-app, 1,          0,       False),
+    Token(DIR,   client,        2,          1,       False),
+    Token(EXIT,  <TreeEnd>,     3,       None,       False)
+]
+
+Error To Implement:
+previous context parent's indent level
+must always be one lesser than the current context's indent level otherwise it means you're creating children into "nothing"
+
+<TreeStart>
+[messaging-app] 
+|--- client/  (1) {parent: messaging-app}
+|   |--- public/ (2) {parent: client, il: 1}
+|   |   \--- index.html (3) {parent: public, il: 1}
+|   |--- src/ (2) {parent: client, il: 1 }
+|   |   |--- components/ (3) {parent: src, il: 2}
+|   |   |   \--- App.vue (4)
+|   |   |--- views/ (3)
+|   |   \--- Chat.vue (4)
+|   |   |--- main.js
+|   |   \--- router.js
+|   |--- package.json
+|   |--- babel.config.js
+|   \--- webpack.config.js
+|--- server/
+|   |--- index.js
+|   |--- controllers/
+|   |   \--- chat.js
+|   |--- models/
+|   |   \--- User.js
+|   |--- routes/
+|   |   \--- chat.js
+|   \--- package.json
+|--- .gitignore
+|--- package.json
+\--- README.md
+<TreeEnd>

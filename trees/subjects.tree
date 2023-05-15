@@ -1,0 +1,20 @@
+#This is a Demo Tree
+#We will have separate parsing for root, parent and child directories
+#
+<TreeStart>
+[Heading] 
++--- geography
+|   +--- public/ 
+|   +--- countries
+|   +--- seas
+|   |   +--- indian_ocean
+|   |   +--- pacific_ocean
+|   |   \--- atlantic_ocean
++--- history
+|   +--- Ancient history
+|   +--- Medieval history
+|   +--- Modern history
+|   |   +--- WW1
+|   |   \--- WW2
+\--- Physics
+<TreeEnd>
