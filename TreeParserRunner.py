@@ -17,7 +17,7 @@ def print_tree(tree):
             rStr += f"{pre}{node.name}\n"
         print(rStr)
 
-def tree_to_svg(tree, filename):
+def tree_to_image(tree, filename):
     DotExporter(tree).to_picture(filename)
 
 def tree_to_json_string(tree):

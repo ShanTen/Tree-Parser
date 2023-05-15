@@ -5,7 +5,7 @@ def run(tree_text):
     if response_tuple != None:
         tree = response_tuple
         print_tree(tree)
-        # tree_to_svg(tree, "tree.svg")
+        tree_to_image(tree, "file_structure.png")
         print(tree_to_json_string(tree))
 
 if __name__ == '__main__':
