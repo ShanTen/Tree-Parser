@@ -1,28 +1,28 @@
 <TreeStart> 
 #File Structure for messaging app
 [messaging-app] 
-|--- client/  
-|   |--- public/ 
++--- client/  
+|   +--- public/ 
 |   |   \--- index.html  #The place where my index.html is
-|   |--- src/ 
-|   |   |--- components/ 
+|   +--- src/ 
+|   |   +--- components/ 
 |   |   |   \--- App.vue 
-|   |   |--- views/ 
+|   |   +--- views/ 
 |   |   |   \--- Chat.vue #This is a comment
-|   |   |--- main.js
+|   |   +--- main.js
 |   |   \--- router.js
-|   |--- package.json
-|   |--- babel.config.js
+|   +--- package.json
+|   +--- babel.config.js
 |   \--- webpack.config.js
-|--- server/
-|   |--- index.js
-|   |--- controllers/
++--- server/
+|   +--- index.js
+|   +--- controllers/
 |   |   \--- chat.js
-|   |--- models/
+|   +--- models/
 |   |   \--- User.js
-|   |--- routes/
+|   +--- routes/
 |   |   \--- chat.js
 |   \--- package.json #make sure to npm install in this folder
-|--- .gitignore
++--- .gitignore
 \--- README.md
 <TreeEnd>
