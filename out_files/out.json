@@ -1,0 +1,95 @@
+{
+ "name": "messaging-app",
+ "children": [
+  {
+   "name": "client",
+   "children": [
+    {
+     "name": "public",
+     "children": [
+      {
+       "name": "index.html"
+      }
+     ]
+    },
+    {
+     "name": "src",
+     "children": [
+      {
+       "name": "components",
+       "children": [
+        {
+         "name": "App.vue"
+        }
+       ]
+      },
+      {
+       "name": "views",
+       "children": [
+        {
+         "name": "Chat.vue"
+        }
+       ]
+      },
+      {
+       "name": "main.js"
+      },
+      {
+       "name": "router.js"
+      }
+     ]
+    },
+    {
+     "name": "package.json"
+    },
+    {
+     "name": "babel.config.js"
+    },
+    {
+     "name": "webpack.config.js"
+    }
+   ]
+  },
+  {
+   "name": "server",
+   "children": [
+    {
+     "name": "index.js"
+    },
+    {
+     "name": "models",
+     "children": [
+      {
+       "name": "User.js"
+      }
+     ]
+    },
+    {
+     "name": "routes",
+     "children": [
+      {
+       "name": "chat.js"
+      }
+     ]
+    },
+    {
+     "name": "package.json"
+    }
+   ]
+  },
+  {
+   "name": "controllers",
+   "children": [
+    {
+     "name": "chat.js"
+    }
+   ]
+  },
+  {
+   "name": ".gitignore"
+  },
+  {
+   "name": " README.md"
+  }
+ ]
+}

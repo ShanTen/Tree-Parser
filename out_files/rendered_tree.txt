@@ -1,0 +1,27 @@
+#Output from program
+
+messaging-app
+├── client
+│   ├── public
+│   │   └── index.html
+│   ├── src
+│   │   ├── components
+│   │   │   └── App.vue
+│   │   ├── views
+│   │   │   └── Chat.vue
+│   │   ├── main.js
+│   │   └── router.js
+│   ├── package.json
+│   ├── babel.config.js
+│   └── webpack.config.js
+├── server
+│   ├── index.js
+│   ├── models
+│   │   └── User.js
+│   ├── routes
+│   │   └── chat.js
+│   └── package.json
+├── controllers
+│   └── chat.js
+├── .gitignore
+└──  README.md
