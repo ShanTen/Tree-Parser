@@ -37,7 +37,7 @@ Something like this:
 
 ## Design
 + Uses a lexer to tokenize the input and then a parser to analyze "context" of each token and create a tree 
-+ Refer [Lexer.py](https://github.com/ShanTen/Tree-Parser/blob/master/lexer.py) and [tree_parser.py](https://github.com/ShanTen/Tree-Parser/blob/master/lexer.py) for more details
++ Refer [Lexer.py](https://github.com/ShanTen/Tree-Parser/blob/master/lexer.py) and [tree_parser.py](https://github.com/ShanTen/Tree-Parser/blob/master/tree_parser.py) for more details
 + Uses [AnyTree](https://pypi.org/project/anytree/) for the tree iterable which is honestly better than anything I could make.
 
 ## Issues in Project
