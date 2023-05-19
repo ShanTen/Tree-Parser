@@ -6,7 +6,7 @@ def run(tree_text):
         tree = response_tuple
         print_tree(tree)
         tree_to_image(tree, "file_structure.png")
-        print(tree_to_json_string(tree))
+        #print(tree_to_json_string(tree))
 
 if __name__ == '__main__':
     import sys
